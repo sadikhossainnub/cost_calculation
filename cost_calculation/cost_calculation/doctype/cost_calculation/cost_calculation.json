@@ -12,9 +12,12 @@
   "column_break_gsoq",
   "transaction_date",
   "margin",
+  "vatait",
   "costing_quantity",
   "fg_item_section",
   "item",
+  "column_break_bcjj",
+  "brand_name",
   "item_section",
   "table_pmcf",
   "section_break_bchh",
@@ -156,13 +159,27 @@
    "link_filters": "[[\"Item\",\"item_group\",\"=\",\"Products\"]]",
    "options": "Item",
    "reqd": 1
+  },
+  {
+   "fieldname": "vatait",
+   "fieldtype": "Percent",
+   "label": "VAT/AIT"
+  },
+  {
+   "fieldname": "column_break_bcjj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "brand_name",
+   "fieldtype": "Data",
+   "label": "Brand Name"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-06-02 12:51:35.814319",
+ "modified": "2025-06-12 15:52:36.073503",
  "modified_by": "Administrator",
  "module": "Cost Calculation",
  "name": "Cost Calculation",
