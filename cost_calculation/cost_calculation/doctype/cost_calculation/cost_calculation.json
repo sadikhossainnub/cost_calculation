@@ -16,14 +16,11 @@
   "costing_quantity",
   "fg_item_section",
   "item",
-  "column_break_bcjj",
   "brand_name",
   "item_section",
-  "table_pmcf",
+  "items",
   "section_break_bchh",
-  "column_break_uknj",
-  "column_break_yvrd",
-  "total",
+  "total_amount",
   "unit_price",
   "amended_from"
  ],
@@ -39,113 +36,39 @@
    "set_only_once": 1
   },
   {
-   "default": "Customer",
-   "fieldname": "price_for",
-   "fieldtype": "Link",
-   "in_standard_filter": 1,
-   "label": "Price For",
-   "options": "DocType",
-   "print_hide": 1,
-   "reqd": 1
-  },
-  {
-   "bold": 1,
-   "fieldname": "party_name",
-   "fieldtype": "Dynamic Link",
-   "in_global_search": 1,
-   "in_standard_filter": 1,
-   "label": "Party",
-   "options": "price_for",
-   "print_hide": 1
-  },
-  {
-   "fieldname": "column_break_gsoq",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "Today",
    "fieldname": "transaction_date",
    "fieldtype": "Date",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Date",
-   "no_copy": 1,
-   "reqd": 1,
-   "search_index": 1,
-   "width": "100px"
+   "reqd": 1
   },
   {
-   "bold": 1,
+   "fieldname": "price_for",
+   "fieldtype": "Select",
+   "label": "Price For",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Link",
+   "label": "Party",
+   "options": "Customer"
+  },
+  {
    "fieldname": "margin",
    "fieldtype": "Percent",
-   "label": "Margin",
-   "print_width": "100px",
-   "reqd": 1
+   "label": "Margin"
   },
   {
-   "bold": 1,
+   "fieldname": "vatait",
+   "fieldtype": "Percent",
+   "label": "VAT/AIT"
+  },
+  {
    "fieldname": "costing_quantity",
    "fieldtype": "Int",
-   "in_list_view": 1,
    "label": "Costing Quantity",
    "reqd": 1
-  },
-  {
-   "fieldname": "item_section",
-   "fieldtype": "Section Break",
-   "label": "Item"
-  },
-  {
-   "allow_bulk_edit": 1,
-   "fieldname": "table_pmcf",
-   "fieldtype": "Table",
-   "label": "Item",
-   "options": "Cost Calculation Item",
-   "reqd": 1,
-   "width": "40px"
-  },
-  {
-   "fieldname": "section_break_bchh",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_uknj",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_yvrd",
-   "fieldtype": "Column Break"
-  },
-  {
-   "bold": 1,
-   "fieldname": "total",
-   "fieldtype": "Currency",
-   "in_preview": 1,
-   "label": "Total",
-   "precision": "2",
-   "read_only": 1,
-   "search_index": 1
-  },
-  {
-   "bold": 1,
-   "fieldname": "unit_price",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "in_preview": 1,
-   "label": "Unit Price",
-   "precision": "2",
-   "read_only": 1,
-   "search_index": 1
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Cost Calculation",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
   },
   {
    "fieldname": "fg_item_section",
@@ -156,30 +79,58 @@
    "fieldname": "item",
    "fieldtype": "Link",
    "label": "Item",
-   "link_filters": "[[\"Item\",\"item_group\",\"=\",\"Products\"]]",
-   "options": "Item",
-   "reqd": 1
-  },
-  {
-   "fieldname": "vatait",
-   "fieldtype": "Percent",
-   "label": "VAT/AIT"
-  },
-  {
-   "fieldname": "column_break_bcjj",
-   "fieldtype": "Column Break"
+   "options": "Item"
   },
   {
    "fieldname": "brand_name",
    "fieldtype": "Data",
    "label": "Brand Name"
+  },
+  {
+   "fieldname": "item_section",
+   "fieldtype": "Section Break",
+   "label": "Item"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Cost Calculation Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_bchh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unit_price",
+   "fieldtype": "Currency",
+   "label": "Unit Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cost Calculation",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_gsoq",
+   "fieldtype": "Column Break"
   }
  ],
- "grid_page_length": 50,
- "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-06-12 15:52:36.073503",
+ "modified": "2025-07-03 20:10:14.000000",
  "modified_by": "Administrator",
  "module": "Cost Calculation",
  "name": "Cost Calculation",
@@ -198,35 +149,8 @@
    "share": 1,
    "submit": 1,
    "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Projects Manager",
-   "share": 1,
-   "submit": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Administrator",
-   "share": 1,
-   "submit": 1,
-   "write": 1
   }
  ],
- "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

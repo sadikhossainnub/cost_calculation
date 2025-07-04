@@ -8,35 +8,21 @@ class CostCalculation(Document):
     def calculate_total_amount(self):
         self.total_amount = 0
         for item in self.items:
-            self.total_amount += item.qty * item.rate
+            item.amount = item.quantity * item.rate
+            self.total_amount += item.amount
+
+        if self.costing_quantity and self.total_amount:
+            base_unit_price = self.total_amount / self.costing_quantity
+            self.unit_price = base_unit_price + (self.margin / 100) + (self.vatait / 100)
+        else:
+            self.unit_price = 0.0
 
     def on_change(self):
         self.calculate_total_amount()
 
     @frappe.whitelist()
     def create_new_version(self):
-        """Creates a new version of the Cost Calculation document."""
-
-        new_doc = frappe.new_doc(self.doctype)
-
-        # Copy relevant fields
-        for field in self.meta.fields:
-            if field.fieldname not in ("serial", "total_amount", "name", "items", "owner", "modified_by", "creation", "modified", "idx", "docstatus"): # Exclude name and auto-generated fields
-                new_doc.set(field.fieldname, self.get(field.fieldname))
-
-        # Copy child table (items)
-        for item in self.items:
-            new_item = new_doc.append("items", {})
-            for field in item.meta.fields:
-                if field.fieldname not in ("name", "owner", "modified_by", "creation", "modified", "idx", "docstatus", "parent", "parentfield", "parenttype"):
-                    new_item.set(field.fieldname, item.get(field.fieldname))
-
-        # Generate a new serial
-        new_doc.serial = frappe.generate_hash(length=10)  # Or your serial generation logic
-
-        # Clear total_amount
-        new_doc.total_amount = 0.0
-
+        new_doc = frappe.copy_doc(self)
+        new_doc.naming_series = self.naming_series
         new_doc.save()
-
         return new_doc.name
