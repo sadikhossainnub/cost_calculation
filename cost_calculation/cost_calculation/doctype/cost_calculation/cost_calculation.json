@@ -16,18 +16,21 @@
   "costing_quantity",
   "fg_item_section",
   "item",
+  "column_break_erfc",
   "brand_name",
   "item_section",
   "items",
   "section_break_bchh",
+  "amended_from",
+  "column_break_jpwd",
   "total_amount",
-  "unit_price",
-  "amended_from"
+  "unit_price"
  ],
  "fields": [
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Serial",
    "no_copy": 1,
    "options": "SAL-CC-.DD-.MM-.YYYY.-",
@@ -36,14 +39,17 @@
    "set_only_once": 1
   },
   {
+   "default": "Today",
    "fieldname": "transaction_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Date",
    "reqd": 1
   },
   {
    "fieldname": "price_for",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Price For",
    "options": "Customer",
    "reqd": 1
@@ -55,11 +61,15 @@
    "options": "Customer"
   },
   {
+   "default": "0",
    "fieldname": "margin",
    "fieldtype": "Percent",
-   "label": "Margin"
+   "in_list_view": 1,
+   "label": "Margin",
+   "reqd": 1
   },
   {
+   "default": "0",
    "fieldname": "vatait",
    "fieldtype": "Percent",
    "label": "VAT/AIT"
@@ -79,7 +89,9 @@
    "fieldname": "item",
    "fieldtype": "Link",
    "label": "Item",
-   "options": "Item"
+   "link_filters": "[[\"Item\",\"item_group\",\"=\",\"Products\"]]",
+   "options": "Item",
+   "reqd": 1
   },
   {
    "fieldname": "brand_name",
@@ -126,11 +138,19 @@
   {
    "fieldname": "column_break_gsoq",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_erfc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jpwd",
+   "fieldtype": "Column Break"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-03 20:10:14.000000",
+ "modified": "2025-07-05 03:19:12.302804",
  "modified_by": "Administrator",
  "module": "Cost Calculation",
  "name": "Cost Calculation",
@@ -151,6 +171,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
