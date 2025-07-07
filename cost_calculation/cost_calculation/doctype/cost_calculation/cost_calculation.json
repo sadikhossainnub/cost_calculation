@@ -78,6 +78,7 @@
    "fieldname": "costing_quantity",
    "fieldtype": "Int",
    "label": "Costing Quantity",
+   "precision": "2",
    "reqd": 1
   },
   {
@@ -150,7 +151,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-05 03:19:12.302804",
+ "modified": "2025-07-07 15:00:12.640911",
  "modified_by": "Administrator",
  "module": "Cost Calculation",
  "name": "Cost Calculation",
