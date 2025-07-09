@@ -17,8 +17,10 @@ class CostCalculation(Document):
             self.total_amount += item.amount
 
         if self.costing_quantity > 0 and self.total_amount > 0:
-            base_unit_price = self.total_amount + ((self.margin / 100) + (self.vatait / 100))
-            self.unit_price = base_unit_price / self.costing_quantity
+            total_margin_amount = self.total_amount * (self.margin / 100)
+            total_vatait_amount = self.total_amount * (self.vatait / 100)
+            final_total_amount = self.total_amount + total_margin_amount + total_vatait_amount
+            self.unit_price = final_total_amount / self.costing_quantity
         else:
             self.unit_price = 0.0
 

@@ -24,7 +24,9 @@
   "amended_from",
   "column_break_jpwd",
   "total_amount",
-  "unit_price"
+  "unit_price",
+  "total_margin",
+  "total_vatait"
  ],
  "fields": [
   {
@@ -147,11 +149,21 @@
   {
    "fieldname": "column_break_jpwd",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_margin",
+   "fieldtype": "Currency",
+   "label": "Total Margin"
+  },
+  {
+   "fieldname": "total_vatait",
+   "fieldtype": "Currency",
+   "label": "Total VAT/AIT"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-07 15:00:12.640911",
+ "modified": "2025-07-10 05:16:23.191592",
  "modified_by": "Administrator",
  "module": "Cost Calculation",
  "name": "Cost Calculation",

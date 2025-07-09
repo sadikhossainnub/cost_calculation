@@ -7,10 +7,11 @@ function calculate_totals(frm) {
     }
     frm.set_value('total_amount', total_amount);
 
-    if (frm.doc.costing_quantity && frm.doc.total_amount) {
-        var base_unit_price = frm.doc.total_amount / frm.doc.costing_quantity;
-        var unit_price = base_unit_price + (frm.doc.margin / 100) + (frm.doc.vatait / 100);
-        frm.set_value('unit_price', unit_price);
+    if (frm.doc.costing_quantity > 0 && frm.doc.total_amount > 0) {
+        var total_margin_amount = frm.doc.total_amount * (frm.doc.margin / 100);
+        var total_vatait_amount = frm.doc.total_amount * (frm.doc.vatait / 100);
+        var final_total_amount = frm.doc.total_amount + total_margin_amount + total_vatait_amount;
+        frm.set_value('unit_price', final_total_amount / frm.doc.costing_quantity);
     } else {
         frm.set_value('unit_price', 0);
     }
