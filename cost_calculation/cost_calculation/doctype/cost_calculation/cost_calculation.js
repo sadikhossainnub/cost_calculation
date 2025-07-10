@@ -24,6 +24,9 @@ function calculate_totals(frm) {
 frappe.ui.form.on('Cost Calculation', {
     refresh: function(frm) {
         calculate_totals(frm);
+        frm.add_custom_button(__('Create Item Price'), function() {
+            frm.call('create_item_price');
+        });
     },
     costing_quantity: function(frm) {
         calculate_totals(frm);
