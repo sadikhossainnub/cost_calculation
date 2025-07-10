@@ -80,7 +80,6 @@
    "fieldname": "costing_quantity",
    "fieldtype": "Int",
    "label": "Costing Quantity",
-   "precision": "2",
    "reqd": 1
   },
   {

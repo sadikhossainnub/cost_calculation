@@ -11,8 +11,12 @@ function calculate_totals(frm) {
         var total_margin_amount = frm.doc.total_amount * (frm.doc.margin / 100);
         var total_vatait_amount = frm.doc.total_amount * (frm.doc.vatait / 100);
         var final_total_amount = frm.doc.total_amount + total_margin_amount + total_vatait_amount;
+        frm.set_value('total_margin', total_margin_amount);
+        frm.set_value('total_vatait', total_vatait_amount);
         frm.set_value('unit_price', final_total_amount / frm.doc.costing_quantity);
     } else {
+        frm.set_value('total_margin', 0);
+        frm.set_value('total_vatait', 0);
         frm.set_value('unit_price', 0);
     }
 }

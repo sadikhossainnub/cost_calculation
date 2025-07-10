@@ -17,11 +17,13 @@ class CostCalculation(Document):
             self.total_amount += item.amount
 
         if self.costing_quantity > 0 and self.total_amount > 0:
-            total_margin_amount = self.total_amount * (self.margin / 100)
-            total_vatait_amount = self.total_amount * (self.vatait / 100)
-            final_total_amount = self.total_amount + total_margin_amount + total_vatait_amount
+            self.total_margin = self.total_amount * (self.margin / 100)
+            self.total_vatait = self.total_amount * (self.vatait / 100)
+            final_total_amount = self.total_amount + self.total_margin + self.total_vatait
             self.unit_price = final_total_amount / self.costing_quantity
         else:
+            self.total_margin = 0.0
+            self.total_vatait = 0.0
             self.unit_price = 0.0
 
     def on_change(self):
