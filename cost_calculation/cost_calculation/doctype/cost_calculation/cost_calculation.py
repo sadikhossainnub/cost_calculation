@@ -8,6 +8,26 @@ class CostCalculation(Document):
         self.vatait = float(self.vatait or 0)
         self.costing_quantity = float(self.costing_quantity or 0)
         self.calculate_total_amount()
+        self.calculate_production_timeline()
+
+    def calculate_production_timeline(self):
+        total_seconds = 0
+        duration_fields = [
+            "polar_cutting_duration",
+            "lamination_duration",
+            "cup_foaming_duration",
+            "printing_duration",
+            "cutting_duration",
+            "quality_check_duration",
+            "drying_duration",
+            "pasting_duration",
+            "delivery_duration",
+        ]
+        for field in duration_fields:
+            total_seconds += self.get(field) or 0
+
+        self.total_production_timeline = total_seconds / (24 * 60 * 60)
+
 
     def calculate_total_amount(self):
         self.total_amount = 0.0

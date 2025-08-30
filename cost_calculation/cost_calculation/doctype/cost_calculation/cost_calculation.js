@@ -21,9 +21,34 @@ function calculate_totals(frm) {
     }
 }
 
+function calculate_production_timeline(frm) {
+    var total_seconds = 0;
+    const duration_fields = [
+        'polar_cutting_duration',
+        'lamination_duration',
+        'cup_foaming_duration',
+        'printing_duration',
+        'cutting_duration',
+        'quality_check_duration',
+        'drying_duration',
+        'pasting_duration',
+        'delivery_duration'
+    ];
+
+    duration_fields.forEach(function(field) {
+        if (frm.doc[field]) {
+            total_seconds += frm.doc[field];
+        }
+    });
+
+    var total_days = total_seconds / (24 * 60 * 60);
+    frm.set_value('total_production_timeline', total_days.toFixed(2));
+}
+
 frappe.ui.form.on('Cost Calculation', {
     refresh: function(frm) {
         calculate_totals(frm);
+        calculate_production_timeline(frm);
         frm.add_custom_button(__('Create Item Price'), function() {
             frm.call('create_item_price');
         });
@@ -36,6 +61,33 @@ frappe.ui.form.on('Cost Calculation', {
     },
     vatait: function(frm) {
         calculate_totals(frm);
+    },
+    polar_cutting_duration: function(frm) {
+        calculate_production_timeline(frm);
+    },
+    lamination_duration: function(frm) {
+        calculate_production_timeline(frm);
+    },
+    cup_foaming_duration: function(frm) {
+        calculate_production_timeline(frm);
+    },
+    printing_duration: function(frm) {
+        calculate_production_timeline(frm);
+    },
+    cutting_duration: function(frm) {
+        calculate_production_timeline(frm);
+    },
+    quality_check_duration: function(frm) {
+        calculate_production_timeline(frm);
+    },
+    drying_duration: function(frm) {
+        calculate_production_timeline(frm);
+    },
+    pasting_duration: function(frm) {
+        calculate_production_timeline(frm);
+    },
+    delivery_duration: function(frm) {
+        calculate_production_timeline(frm);
     }
 });
 

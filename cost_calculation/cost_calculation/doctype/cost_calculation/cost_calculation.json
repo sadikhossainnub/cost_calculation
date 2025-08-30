@@ -280,6 +280,7 @@
    "label": "Pasting Duration"
   },
   {
+   "default": "now",
    "fieldname": "costing_time",
    "fieldtype": "Time",
    "label": "Costing Time"
@@ -348,8 +349,9 @@
    "label": "Any Instruction"
   },
   {
+   "fetch_from": "item.description",
    "fieldname": "item_description",
-   "fieldtype": "Data",
+   "fieldtype": "Text Editor",
    "label": "Item Description"
   },
   {
@@ -368,15 +370,14 @@
   },
   {
    "fieldname": "production_difficulties_faced_by_production_team",
-   "fieldtype": "Data",
-   "label": "Production Difficulties Faced By Production Team",
-   "length": 3
+   "fieldtype": "Text Editor",
+   "label": "Production Difficulties Faced By Production Team"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-08-26 04:13:58.781943",
- "modified_by": "aquib.pwf@gmail.com",
+ "modified": "2025-08-31 04:41:20.395350",
+ "modified_by": "sayedtkg@gmail.com",
  "module": "Cost Calculation",
  "name": "Cost Calculation",
  "naming_rule": "By \"Naming Series\" field",
