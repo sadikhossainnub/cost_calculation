@@ -9,6 +9,9 @@
   "naming_series",
   "price_for",
   "customer_name",
+  "costing_required_by",
+  "tentative_delivery_date_by_client",
+  "customer_delivery_location",
   "column_break_gsoq",
   "transaction_date",
   "costing_time",
@@ -16,48 +19,16 @@
   "vatait",
   "costing_quantity",
   "target_price_from_customer",
+  "any_instruction",
   "fg_item_section",
   "item",
+  "item_description",
   "required_items_section",
   "items",
   "chaat_size_rate",
   "chaat_details",
-  "delivery_timeline_section",
-  "polar_cutting_start_date",
-  "printing_start_date_zzop",
-  "drying_start_date",
-  "cutting_start_date",
-  "lamination_start_date",
-  "cup_foaming_start_date",
-  "pasting_start_date",
-  "quality_check_start_date",
-  "delivery_start_date",
-  "column_break_kqhn",
-  "polar_cutting_end_date",
-  "printing_end_date",
-  "drying_end_date",
-  "cutting_end_date",
-  "lamination_end_date",
-  "cup_foaming_end_date",
-  "pasting_end_date",
-  "quality_check_end_date",
-  "delivery_end_date",
-  "column_break_autq",
-  "polar_cutting_duration",
-  "printing_duration",
-  "drying_duration",
-  "cutting_duration",
-  "lamination_duration",
-  "cup_foaming_duration",
-  "pasting_duration",
-  "quality_check_duration",
-  "delivery_duration",
-  "section_break_vvdg",
-  "production_start_date",
-  "column_break_cllj",
-  "production_end_date",
-  "section_break_opcm",
-  "total_production_timeline",
+  "section_break_gxdx",
+  "wastage_details_copy",
   "section_break_bchh",
   "amended_from",
   "costing_excel_file_upload",
@@ -69,7 +40,28 @@
   "unit_price",
   "total_margin",
   "total_vatait",
-  "profit_rating"
+  "wastage_amount_in_taka",
+  "total_wastage_",
+  "profit_rating",
+  "delivery_timeline_section",
+  "column_break_nrtj",
+  "polar_cutting_duration",
+  "printing_duration",
+  "drying_duration",
+  "column_break_kejt",
+  "lamination_duration",
+  "cutting_duration",
+  "pasting_duration",
+  "column_break_devj",
+  "cup_foaming_duration",
+  "quality_check_duration",
+  "delivery_duration",
+  "section_break_opcm",
+  "total_production_timeline",
+  "column_break_rklk",
+  "extra_due_time_in_days",
+  "section_break_ngmo",
+  "production_difficulties_faced_by_production_team"
  ],
  "fields": [
   {
@@ -141,7 +133,8 @@
   },
   {
    "fieldname": "section_break_bchh",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Total Information & Costing"
   },
   {
    "fieldname": "total_amount",
@@ -180,7 +173,7 @@
   {
    "fieldname": "total_vatait",
    "fieldtype": "Currency",
-   "label": "Total VAT/AIT"
+   "label": "Total VAT / AIT"
   },
   {
    "fieldname": "costing_excel_file_upload",
@@ -214,8 +207,7 @@
    "fieldname": "chaat_details",
    "fieldtype": "Table",
    "label": "Chaat Details",
-   "options": "Cost Calculation Item",
-   "reqd": 1
+   "options": "Cost Calculation Item"
   },
   {
    "fieldname": "delivery_timeline_section",
@@ -223,96 +215,29 @@
    "label": "Production Timeline"
   },
   {
-   "fieldname": "column_break_kqhn",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "printing_start_date_zzop",
-   "fieldtype": "Date",
-   "label": "Printing Start Date"
-  },
-  {
-   "fieldname": "column_break_autq",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "printing_end_date",
-   "fieldtype": "Date",
-   "label": "Printing End Date"
-  },
-  {
    "fieldname": "printing_duration",
    "fieldtype": "Duration",
-   "label": "Printing Duration",
-   "reqd": 1
-  },
-  {
-   "fieldname": "cutting_start_date",
-   "fieldtype": "Date",
-   "label": "Cutting Start Date"
+   "label": "Printing Duration"
   },
   {
    "fieldname": "cutting_duration",
    "fieldtype": "Duration",
-   "label": "Cutting Duration",
-   "reqd": 1
-  },
-  {
-   "fieldname": "cutting_end_date",
-   "fieldtype": "Date",
-   "label": "Cutting End Date"
-  },
-  {
-   "fieldname": "lamination_start_date",
-   "fieldtype": "Date",
-   "label": "Lamination Start Date"
-  },
-  {
-   "fieldname": "lamination_end_date",
-   "fieldtype": "Date",
-   "label": "Lamination End Date"
+   "label": "Cutting Duration"
   },
   {
    "fieldname": "lamination_duration",
    "fieldtype": "Duration",
-   "label": "Lamination Duration",
-   "reqd": 1
-  },
-  {
-   "fieldname": "cup_foaming_start_date",
-   "fieldtype": "Date",
-   "label": "Cup Foaming Start Date"
-  },
-  {
-   "fieldname": "cup_foaming_end_date",
-   "fieldtype": "Date",
-   "label": "Cup Foaming End Date"
+   "label": "Lamination Duration"
   },
   {
    "fieldname": "cup_foaming_duration",
    "fieldtype": "Duration",
-   "label": "Cup Foaming Duration",
-   "reqd": 1
-  },
-  {
-   "fieldname": "drying_start_date",
-   "fieldtype": "Date",
-   "label": "Drying Start Date"
-  },
-  {
-   "fieldname": "drying_end_date",
-   "fieldtype": "Date",
-   "label": "Drying End Date"
+   "label": "Cup Foaming Duration"
   },
   {
    "fieldname": "drying_duration",
    "fieldtype": "Duration",
-   "label": "Drying Duration",
-   "reqd": 1
-  },
-  {
-   "fieldname": "section_break_vvdg",
-   "fieldtype": "Section Break"
+   "label": "Drying Duration"
   },
   {
    "fieldname": "total_production_timeline",
@@ -320,54 +245,18 @@
    "label": "Total Production Timeline (In Days)"
   },
   {
-   "fieldname": "quality_check_end_date",
-   "fieldtype": "Date",
-   "label": "Quality Check End Date"
-  },
-  {
    "fieldname": "quality_check_duration",
    "fieldtype": "Duration",
-   "label": "Quality Check Duration",
-   "reqd": 1
-  },
-  {
-   "fieldname": "quality_check_start_date",
-   "fieldtype": "Date",
-   "label": "Quality Check Start Date"
-  },
-  {
-   "fieldname": "production_start_date",
-   "fieldtype": "Data",
-   "label": "Production Start Date"
-  },
-  {
-   "fieldname": "column_break_cllj",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "production_end_date",
-   "fieldtype": "Data",
-   "label": "Production End Date"
+   "label": "Quality Check Duration"
   },
   {
    "fieldname": "section_break_opcm",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "delivery_start_date",
-   "fieldtype": "Date",
-   "label": "Delivery Start Date"
-  },
-  {
-   "fieldname": "delivery_end_date",
-   "fieldtype": "Date",
-   "label": "Delivery End Date"
-  },
-  {
    "fieldname": "delivery_duration",
    "fieldtype": "Duration",
-   "label": "Delivery Duration",
-   "reqd": 1
+   "label": "Delivery Duration"
   },
   {
    "fieldname": "customer_name",
@@ -381,36 +270,14 @@
    "label": "Design File Upload"
   },
   {
-   "fieldname": "polar_cutting_start_date",
-   "fieldtype": "Date",
-   "label": "Polar Cutting Start Date"
-  },
-  {
-   "fieldname": "polar_cutting_end_date",
-   "fieldtype": "Date",
-   "label": "Polar Cutting End Date"
-  },
-  {
    "fieldname": "polar_cutting_duration",
    "fieldtype": "Duration",
-   "label": "Polar Cutting Duration",
-   "reqd": 1
+   "label": "Polar Cutting Duration"
   },
   {
    "fieldname": "pasting_duration",
    "fieldtype": "Duration",
-   "label": "Pasting Duration",
-   "reqd": 1
-  },
-  {
-   "fieldname": "pasting_end_date",
-   "fieldtype": "Date",
-   "label": "Pasting End Date"
-  },
-  {
-   "fieldname": "pasting_start_date",
-   "fieldtype": "Date",
-   "label": "Pasting Start Date"
+   "label": "Pasting Duration"
   },
   {
    "fieldname": "costing_time",
@@ -427,11 +294,88 @@
    "fieldname": "target_price_from_customer",
    "fieldtype": "Data",
    "label": "Target Price From Customer"
+  },
+  {
+   "fieldname": "column_break_nrtj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_gxdx",
+   "fieldtype": "Section Break",
+   "label": "Wastage Size"
+  },
+  {
+   "fieldname": "wastage_details_copy",
+   "fieldtype": "Table",
+   "label": "Wastage Details Copy",
+   "options": "Cost Calculation Item"
+  },
+  {
+   "fieldname": "column_break_kejt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_devj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rklk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "extra_due_time_in_days",
+   "fieldtype": "Data",
+   "label": "Extra Due Time (In Days)"
+  },
+  {
+   "fieldname": "costing_required_by",
+   "fieldtype": "Datetime",
+   "label": "Costing Required By (Sales Team)"
+  },
+  {
+   "fieldname": "tentative_delivery_date_by_client",
+   "fieldtype": "Datetime",
+   "label": "Tentative Delivery Date By Client"
+  },
+  {
+   "fieldname": "customer_delivery_location",
+   "fieldtype": "Data",
+   "label": "Customer Delivery Location"
+  },
+  {
+   "fieldname": "any_instruction",
+   "fieldtype": "Data",
+   "label": "Any Instruction"
+  },
+  {
+   "fieldname": "item_description",
+   "fieldtype": "Data",
+   "label": "Item Description"
+  },
+  {
+   "fieldname": "wastage_amount_in_taka",
+   "fieldtype": "Data",
+   "label": "Wastage Amount In Taka"
+  },
+  {
+   "fieldname": "total_wastage_",
+   "fieldtype": "Data",
+   "label": "Total Wastage %"
+  },
+  {
+   "fieldname": "section_break_ngmo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "production_difficulties_faced_by_production_team",
+   "fieldtype": "Data",
+   "label": "Production Difficulties Faced By Production Team",
+   "length": 3
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-08-04 19:15:53.674457",
+ "modified": "2025-08-26 04:13:58.781943",
  "modified_by": "aquib.pwf@gmail.com",
  "module": "Cost Calculation",
  "name": "Cost Calculation",
@@ -449,6 +393,28 @@
    "role": "System Manager",
    "share": 1,
    "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
    "write": 1
   }
  ],
