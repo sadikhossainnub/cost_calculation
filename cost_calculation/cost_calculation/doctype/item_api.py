@@ -13,7 +13,8 @@ def make_cost_calculation(source_name, target_doc=None):
             "Item": {
                 "doctype": "Cost Calculation",
                 "field_map": {
-                    "name": "item_code"
+                    "name": "item_code",
+                    "item_description_long": "description"
                 }
             }
         },

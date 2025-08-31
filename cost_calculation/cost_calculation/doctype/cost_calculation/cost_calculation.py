@@ -52,7 +52,7 @@ class CostCalculation(Document):
         if self.item_code:
             item = frappe.get_doc("Item", self.item_code)
             self.item_name = item.item_name
-            self.description = item.description
+            self.description = item.item_description_long
 
     def on_change(self):
         frappe.log_error("Entering on_change method", "CostCalculation Debug")
