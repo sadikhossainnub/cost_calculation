@@ -48,6 +48,12 @@ class CostCalculation(Document):
             self.total_vatait = 0.0
             self.unit_price = 0.0
 
+    def set_missing_values(self):
+        if self.item_code:
+            item = frappe.get_doc("Item", self.item_code)
+            self.item_name = item.item_name
+            self.description = item.description
+
     def on_change(self):
         frappe.log_error("Entering on_change method", "CostCalculation Debug")
         self.calculate_total_amount()

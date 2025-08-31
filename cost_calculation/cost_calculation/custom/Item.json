@@ -1,0 +1,11 @@
+{
+    "custom_buttons": [
+        {
+            "label": "Cost Calculation",
+            "event": "cost_calculation.public.js.item_button.make_cost_calculation",
+            "roles": [
+                "System Manager"
+            ]
+        }
+    ]
+}
