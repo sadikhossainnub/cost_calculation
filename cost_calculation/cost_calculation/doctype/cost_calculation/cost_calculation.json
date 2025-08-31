@@ -22,7 +22,7 @@
   "any_instruction",
   "fg_item_section",
   "item",
-  "item_description",
+  "description",
   "required_items_section",
   "items",
   "chaat_size_rate",
@@ -123,12 +123,6 @@
    "link_filters": "[]",
    "options": "Item",
    "reqd": 1
-  },
-  {
-   "fieldname": "item_code",
-   "fieldtype": "Data",
-   "label": "Item Code",
-   "hidden": 1
   },
   {
    "fieldname": "items",
@@ -355,12 +349,6 @@
    "label": "Any Instruction"
   },
   {
-   "fetch_from": "item.description",
-   "fieldname": "item_description",
-   "fieldtype": "Text Editor",
-   "label": "Item Description"
-  },
-  {
    "fieldname": "wastage_amount_in_taka",
    "fieldtype": "Data",
    "label": "Wastage Amount In Taka"
@@ -378,11 +366,17 @@
    "fieldname": "production_difficulties_faced_by_production_team",
    "fieldtype": "Text Editor",
    "label": "Production Difficulties Faced By Production Team"
+  },
+  {
+   "fetch_from": "item.description",
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Item Description"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-08-31 04:41:20.395350",
+ "modified": "2025-08-31 14:07:14.200909",
  "modified_by": "sayedtkg@gmail.com",
  "module": "Cost Calculation",
  "name": "Cost Calculation",
