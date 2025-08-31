@@ -3,12 +3,14 @@ from frappe.model.document import Document
 
 class CostCalculation(Document):
     def validate(self):
+        frappe.log_error("Entering validate method", "CostCalculation Debug")
         # Ensure numeric fields are properly cast to float
         self.margin = float(self.margin or 0)
         self.vatait = float(self.vatait or 0)
         self.costing_quantity = float(self.costing_quantity or 0)
         self.calculate_total_amount()
         self.calculate_production_timeline()
+        frappe.log_error(f"Exiting validate method. Total amount: {self.total_amount}", "CostCalculation Debug")
 
     def calculate_production_timeline(self):
         total_seconds = 0
@@ -47,7 +49,9 @@ class CostCalculation(Document):
             self.unit_price = 0.0
 
     def on_change(self):
+        frappe.log_error("Entering on_change method", "CostCalculation Debug")
         self.calculate_total_amount()
+        frappe.log_error(f"Exiting on_change method. Total amount: {self.total_amount}", "CostCalculation Debug")
 
     @frappe.whitelist()
     def create_new_version(self):
