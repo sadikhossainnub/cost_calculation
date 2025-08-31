@@ -308,7 +308,7 @@
   {
    "fieldname": "wastage_details_copy",
    "fieldtype": "Table",
-   "label": "Wastage Details Copy",
+   "label": "Wastage Details",
    "options": "Cost Calculation Item"
   },
   {
@@ -376,7 +376,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-08-31 14:07:14.200909",
+ "modified": "2025-08-31 14:14:34.647183",
  "modified_by": "sayedtkg@gmail.com",
  "module": "Cost Calculation",
  "name": "Cost Calculation",
