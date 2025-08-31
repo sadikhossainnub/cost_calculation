@@ -20,6 +20,11 @@
   "costing_quantity",
   "target_price_from_customer",
   "any_instruction",
+  "section_break_cxhw",
+  "rm_item",
+  "rm_paper_size_column",
+  "height",
+  "weight",
   "fg_item_section",
   "item",
   "description",
@@ -372,11 +377,36 @@
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "label": "Item Description"
+  },
+  {
+   "fieldname": "section_break_cxhw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rm_paper_size_column",
+   "fieldtype": "Column Break",
+   "label": "RM Paper Size"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "rm_item",
+   "fieldtype": "Link",
+   "label": "RM Item",
+   "options": "Item"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-08-31 14:14:34.647183",
+ "modified": "2025-08-31 14:40:48.100471",
  "modified_by": "sayedtkg@gmail.com",
  "module": "Cost Calculation",
  "name": "Cost Calculation",
