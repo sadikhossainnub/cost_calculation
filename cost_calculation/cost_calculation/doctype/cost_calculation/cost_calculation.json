@@ -9,62 +9,143 @@
   "naming_series",
   "price_for",
   "customer_name",
+  "account_manager",
   "costing_required_by",
   "tentative_delivery_date_by_client",
   "customer_delivery_location",
   "column_break_gsoq",
   "transaction_date",
   "costing_time",
-  "margin",
   "vatait",
-  "costing_quantity",
+  "main_product_quantity",
   "target_price_from_customer",
+  "previous_order_sale_rate",
   "any_instruction",
-  "section_break_cxhw",
-  "rm_item",
-  "rm_paper_size_column",
-  "height",
-  "weight",
+  "quantity_and_margin_section",
+  "quantity_01__main_column",
+  "costing_quantity_01",
+  "margin01",
+  "quantity_02_column",
+  "costing_quantity_02",
+  "margin02",
+  "quantity_03_column",
+  "costing_quantity_03",
+  "margin03",
   "fg_item_section",
   "item",
   "description",
-  "required_items_section",
+  "raw_material_items",
+  "items_copy_copy_copy",
+  "section_break_cxhw",
+  "rm_item",
+  "per_sheet_output_count",
+  "bottom_per_roll_cup_output_count",
+  "rm_paper_size_column",
+  "height",
+  "weight",
+  "service_items_section",
   "items",
+  "packaging_items_section",
+  "items_copy",
+  "section_break_hjkc",
+  "items_copy_copy",
   "chaat_size_rate",
   "chaat_details",
   "section_break_gxdx",
   "wastage_details_copy",
   "section_break_bchh",
-  "amended_from",
-  "costing_excel_file_upload",
-  "ctp_setting_file_upload",
-  "design_file_upload",
-  "per_sheet_output_count",
+  "quantity_01_column",
+  "product_count_01",
+  "total_raw_material_cost_01",
+  "total_packaging_cost_01",
+  "total_service_cost_01",
+  "wastage_amount_in_taka_01",
+  "total_wastage_01",
+  "total_amount01",
+  "chaat_total_sale_amount_01",
+  "discount_in_taka_01",
+  "tips_01",
+  "total_margin01",
+  "unit_price_01",
+  "total_vatait_01",
+  "grand_total_01",
   "column_break_jpwd",
-  "total_amount",
-  "unit_price",
-  "total_margin",
-  "total_vatait",
-  "wastage_amount_in_taka",
-  "total_wastage_",
+  "product_quantity_02",
+  "total_raw_material_cost_02",
+  "total_packaging_cost_02",
+  "total_service_cost_02",
+  "wastage_amount_in_taka_02",
+  "total_wastage_02",
+  "total_amount02",
+  "chaat_total_sale_amount_02",
+  "discount_in_taka_02",
+  "tips_02",
+  "total_margin02",
+  "unit_price_02",
+  "total_vatait_02",
+  "grand_total_02",
+  "column_break_zdhs",
+  "product_quantity_03",
+  "total_raw_material_cost_03",
+  "total_packaging_cost_03",
+  "total_service_cost_03",
+  "wastage_amount_in_taka_03",
+  "total_wastage_03",
+  "total_amount03",
+  "chaat_total_sale_amount_03",
+  "discount_in_taka_03",
+  "tips_03",
+  "total_margin03",
+  "unit_price_03",
+  "total_vatait_03",
+  "grand_total_03",
+  "section_break_cauh",
+  "costing_excel_file_upload",
+  "design_file_upload",
+  "ctp_setting_file_upload",
+  "column_break_zhxm",
+  "amended_from",
   "profit_rating",
   "delivery_timeline_section",
   "column_break_nrtj",
-  "polar_cutting_duration",
-  "printing_duration",
-  "drying_duration",
+  "polar_cutting_duration01",
+  "printing_duration01",
+  "drying_duration01",
+  "lamination_duration01",
+  "cutting_duration01",
+  "pasting_duration01",
+  "cup_foaming_duration01",
+  "quality_check_duration01",
+  "delivery_duration01",
   "column_break_kejt",
-  "lamination_duration",
-  "cutting_duration",
-  "pasting_duration",
+  "polar_cutting_duration02",
+  "printing_duration02",
+  "drying_duration02",
+  "lamination_duration02",
+  "cutting_duration02",
+  "pasting_duration02",
+  "cup_foaming_duration02",
+  "quality_check_duration02",
+  "delivery_duration02",
   "column_break_devj",
-  "cup_foaming_duration",
-  "quality_check_duration",
-  "delivery_duration",
+  "polar_cutting_duration03",
+  "printing_duration03",
+  "drying_duration03",
+  "lamination_duration03",
+  "cutting_duration03",
+  "pasting_duration03",
+  "cup_foaming_duration03",
+  "quality_check_duration03",
+  "delivery_duration03",
   "section_break_opcm",
-  "total_production_timeline",
+  "total_production_timeline01",
+  "extra_due_time_in_days01",
   "column_break_rklk",
-  "extra_due_time_in_days",
+  "total_production_timeline02",
+  "extra_due_time_in_days02",
+  "column_break_djlr",
+  "total_production_timeline03",
+  "extra_due_time_in_days03",
   "section_break_ngmo",
   "production_difficulties_faced_by_production_team"
  ],
@@ -98,23 +179,9 @@
   },
   {
    "default": "0",
-   "fieldname": "margin",
-   "fieldtype": "Percent",
-   "in_list_view": 1,
-   "label": "Margin",
-   "reqd": 1
-  },
-  {
-   "default": "0",
    "fieldname": "vatait",
    "fieldtype": "Percent",
    "label": "VAT / AIT"
-  },
-  {
-   "fieldname": "costing_quantity",
-   "fieldtype": "Int",
-   "label": "Costing Quantity",
-   "reqd": 1
   },
   {
    "fieldname": "fg_item_section",
@@ -142,18 +209,6 @@
    "label": "Total Information & Costing"
   },
   {
-   "fieldname": "total_amount",
-   "fieldtype": "Currency",
-   "label": "Total Amount",
-   "read_only": 1
-  },
-  {
-   "fieldname": "unit_price",
-   "fieldtype": "Currency",
-   "label": "Unit Price",
-   "read_only": 1
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -168,17 +223,8 @@
   },
   {
    "fieldname": "column_break_jpwd",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "total_margin",
-   "fieldtype": "Currency",
-   "label": "Total Margin"
-  },
-  {
-   "fieldname": "total_vatait",
-   "fieldtype": "Currency",
-   "label": "Total VAT / AIT"
+   "fieldtype": "Column Break",
+   "label": "Quantity 02 - COSTING DETAILS"
   },
   {
    "fieldname": "costing_excel_file_upload",
@@ -199,11 +245,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "required_items_section",
-   "fieldtype": "Section Break",
-   "label": "Required Items"
-  },
-  {
    "fieldname": "chaat_size_rate",
    "fieldtype": "Section Break",
    "label": "Chaat Size & Rate"
@@ -220,48 +261,8 @@
    "label": "Production Timeline"
   },
   {
-   "fieldname": "printing_duration",
-   "fieldtype": "Duration",
-   "label": "Printing Duration"
-  },
-  {
-   "fieldname": "cutting_duration",
-   "fieldtype": "Duration",
-   "label": "Cutting Duration"
-  },
-  {
-   "fieldname": "lamination_duration",
-   "fieldtype": "Duration",
-   "label": "Lamination Duration"
-  },
-  {
-   "fieldname": "cup_foaming_duration",
-   "fieldtype": "Duration",
-   "label": "Cup Foaming Duration"
-  },
-  {
-   "fieldname": "drying_duration",
-   "fieldtype": "Duration",
-   "label": "Drying Duration"
-  },
-  {
-   "fieldname": "total_production_timeline",
-   "fieldtype": "Data",
-   "label": "Total Production Timeline (In Days)"
-  },
-  {
-   "fieldname": "quality_check_duration",
-   "fieldtype": "Duration",
-   "label": "Quality Check Duration"
-  },
-  {
    "fieldname": "section_break_opcm",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "delivery_duration",
-   "fieldtype": "Duration",
-   "label": "Delivery Duration"
   },
   {
    "fieldname": "customer_name",
@@ -273,16 +274,6 @@
    "fieldname": "design_file_upload",
    "fieldtype": "Attach",
    "label": "Design File Upload"
-  },
-  {
-   "fieldname": "polar_cutting_duration",
-   "fieldtype": "Duration",
-   "label": "Polar Cutting Duration"
-  },
-  {
-   "fieldname": "pasting_duration",
-   "fieldtype": "Duration",
-   "label": "Pasting Duration"
   },
   {
    "default": "now",
@@ -303,12 +294,13 @@
   },
   {
    "fieldname": "column_break_nrtj",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "label": "Quantity 01 - Production TImeline"
   },
   {
    "fieldname": "section_break_gxdx",
    "fieldtype": "Section Break",
-   "label": "Wastage Size"
+   "label": "Wastage Count"
   },
   {
    "fieldname": "wastage_details_copy",
@@ -318,20 +310,17 @@
   },
   {
    "fieldname": "column_break_kejt",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "label": "Quantity 02 - Production TImeline"
   },
   {
    "fieldname": "column_break_devj",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "label": "Quantity 03 - Production TImeline"
   },
   {
    "fieldname": "column_break_rklk",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "extra_due_time_in_days",
-   "fieldtype": "Data",
-   "label": "Extra Due Time (In Days)"
   },
   {
    "fieldname": "costing_required_by",
@@ -354,23 +343,14 @@
    "label": "Any Instruction"
   },
   {
-   "fieldname": "wastage_amount_in_taka",
-   "fieldtype": "Data",
-   "label": "Wastage Amount In Taka"
-  },
-  {
-   "fieldname": "total_wastage_",
-   "fieldtype": "Data",
-   "label": "Total Wastage %"
-  },
-  {
    "fieldname": "section_break_ngmo",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Production Difficulties Faced By Production Team"
   },
   {
    "fieldname": "production_difficulties_faced_by_production_team",
    "fieldtype": "Text Editor",
-   "label": "Production Difficulties Faced By Production Team"
+   "label": "Details"
   },
   {
    "fetch_from": "item.description",
@@ -380,7 +360,8 @@
   },
   {
    "fieldname": "section_break_cxhw",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Raw Materials List"
   },
   {
    "fieldname": "rm_paper_size_column",
@@ -402,12 +383,539 @@
    "fieldtype": "Link",
    "label": "RM Item",
    "options": "Item"
+  },
+  {
+   "fieldname": "service_items_section",
+   "fieldtype": "Section Break",
+   "label": "Service Items"
+  },
+  {
+   "fieldname": "packaging_items_section",
+   "fieldtype": "Section Break",
+   "label": "Packaging Items"
+  },
+  {
+   "fieldname": "items_copy",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Cost Calculation Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bottom_per_roll_cup_output_count",
+   "fieldtype": "Data",
+   "label": "Bottom Per Roll Cup Output Count"
+  },
+  {
+   "fieldname": "account_manager",
+   "fieldtype": "Link",
+   "label": "Account Manager",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "previous_order_sale_rate",
+   "fieldtype": "Data",
+   "label": "Previous Order Sale Rate"
+  },
+  {
+   "fieldname": "section_break_hjkc",
+   "fieldtype": "Section Break",
+   "label": "Delivery Charge"
+  },
+  {
+   "fieldname": "items_copy_copy",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Cost Calculation Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "raw_material_items",
+   "fieldtype": "Section Break",
+   "label": "Raw Material Items"
+  },
+  {
+   "fieldname": "items_copy_copy_copy",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Cost Calculation Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantity_01_column",
+   "fieldtype": "Column Break",
+   "label": "Quantity 01 - COSTING DETAILS"
+  },
+  {
+   "fieldname": "total_raw_material_cost_01",
+   "fieldtype": "Data",
+   "label": "Total Raw Material Cost 01"
+  },
+  {
+   "fieldname": "total_packaging_cost_01",
+   "fieldtype": "Data",
+   "label": "Total Packaging Cost 01"
+  },
+  {
+   "fieldname": "total_service_cost_01",
+   "fieldtype": "Data",
+   "label": "Total Service Cost 01"
+  },
+  {
+   "fieldname": "wastage_amount_in_taka_01",
+   "fieldtype": "Data",
+   "label": "Wastage Amount In Taka 01"
+  },
+  {
+   "fieldname": "total_wastage_01",
+   "fieldtype": "Data",
+   "label": "Total Wastage % 01"
+  },
+  {
+   "fieldname": "chaat_total_sale_amount_01",
+   "fieldtype": "Data",
+   "label": "(-) Chaat Total Sale Amount 01"
+  },
+  {
+   "fieldname": "discount_in_taka_01",
+   "fieldtype": "Data",
+   "label": "(-) Discount In Taka 01"
+  },
+  {
+   "fieldname": "tips_01",
+   "fieldtype": "Data",
+   "label": "(+) Tips 01"
+  },
+  {
+   "fieldname": "total_margin01",
+   "fieldtype": "Currency",
+   "label": "Total Margin 01"
+  },
+  {
+   "fieldname": "unit_price_01",
+   "fieldtype": "Currency",
+   "label": "Unit Price 01",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_vatait_01",
+   "fieldtype": "Currency",
+   "label": "Total VAT / AIT 01"
+  },
+  {
+   "fieldname": "grand_total_01",
+   "fieldtype": "Currency",
+   "label": "Grand Total 01"
+  },
+  {
+   "fieldname": "discount_in_taka_02",
+   "fieldtype": "Data",
+   "label": "(-) Discount In Taka 02"
+  },
+  {
+   "fieldname": "tips_02",
+   "fieldtype": "Data",
+   "label": "(+) Tips 02"
+  },
+  {
+   "fieldname": "column_break_zdhs",
+   "fieldtype": "Column Break",
+   "label": "Quantity 03 - COSTING DETAILS"
+  },
+  {
+   "fieldname": "product_quantity_02",
+   "fieldtype": "Data",
+   "label": "Product Quantity 02"
+  },
+  {
+   "fieldname": "total_raw_material_cost_02",
+   "fieldtype": "Data",
+   "label": "Total Raw Material Cost 02"
+  },
+  {
+   "fieldname": "product_quantity_03",
+   "fieldtype": "Data",
+   "label": "Product Quantity 03"
+  },
+  {
+   "fieldname": "total_raw_material_cost_03",
+   "fieldtype": "Data",
+   "label": "Total Raw Material Cost 03"
+  },
+  {
+   "fieldname": "total_packaging_cost_02",
+   "fieldtype": "Data",
+   "label": "Total Packaging Cost 02"
+  },
+  {
+   "fieldname": "total_packaging_cost_03",
+   "fieldtype": "Data",
+   "label": "Total Packaging Cost 03"
+  },
+  {
+   "fieldname": "total_service_cost_02",
+   "fieldtype": "Data",
+   "label": "Total Service Cost 02"
+  },
+  {
+   "fieldname": "wastage_amount_in_taka_02",
+   "fieldtype": "Data",
+   "label": "Wastage Amount In Taka 02"
+  },
+  {
+   "fieldname": "total_service_cost_03",
+   "fieldtype": "Data",
+   "label": "Total Service Cost 03"
+  },
+  {
+   "fieldname": "wastage_amount_in_taka_03",
+   "fieldtype": "Data",
+   "label": "Wastage Amount In Taka 03"
+  },
+  {
+   "fieldname": "total_wastage_02",
+   "fieldtype": "Data",
+   "label": "Total Wastage % 02"
+  },
+  {
+   "fieldname": "chaat_total_sale_amount_02",
+   "fieldtype": "Data",
+   "label": "(-) Chaat Total Sale Amount 02"
+  },
+  {
+   "fieldname": "total_wastage_03",
+   "fieldtype": "Data",
+   "label": "Total Wastage % 03"
+  },
+  {
+   "fieldname": "chaat_total_sale_amount_03",
+   "fieldtype": "Data",
+   "label": "(-) Chaat Total Sale Amount 03"
+  },
+  {
+   "fieldname": "total_margin02",
+   "fieldtype": "Currency",
+   "label": "Total Margin 02"
+  },
+  {
+   "fieldname": "unit_price_02",
+   "fieldtype": "Currency",
+   "label": "Unit Price 02",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_vatait_02",
+   "fieldtype": "Currency",
+   "label": "Total VAT / AIT 02"
+  },
+  {
+   "fieldname": "grand_total_02",
+   "fieldtype": "Currency",
+   "label": "Grand Total 02"
+  },
+  {
+   "fieldname": "discount_in_taka_03",
+   "fieldtype": "Data",
+   "label": "(-) Discount In Taka 03"
+  },
+  {
+   "fieldname": "tips_03",
+   "fieldtype": "Data",
+   "label": "(+) Tips 03"
+  },
+  {
+   "fieldname": "total_margin03",
+   "fieldtype": "Currency",
+   "label": "Total Margin 03"
+  },
+  {
+   "fieldname": "unit_price_03",
+   "fieldtype": "Currency",
+   "label": "Unit Price 03",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_vatait_03",
+   "fieldtype": "Currency",
+   "label": "Total VAT / AIT 03"
+  },
+  {
+   "fieldname": "grand_total_03",
+   "fieldtype": "Currency",
+   "label": "Grand Total 03"
+  },
+  {
+   "fieldname": "section_break_cauh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_zhxm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "polar_cutting_duration01",
+   "fieldtype": "Duration",
+   "label": "Polar Cutting Duration 01"
+  },
+  {
+   "fieldname": "printing_duration01",
+   "fieldtype": "Duration",
+   "label": "Printing Duration 01"
+  },
+  {
+   "fieldname": "drying_duration01",
+   "fieldtype": "Duration",
+   "label": "Drying Duration 01"
+  },
+  {
+   "fieldname": "lamination_duration01",
+   "fieldtype": "Duration",
+   "label": "Lamination Duration 01"
+  },
+  {
+   "fieldname": "cutting_duration01",
+   "fieldtype": "Duration",
+   "label": "Cutting Duration 01"
+  },
+  {
+   "fieldname": "pasting_duration01",
+   "fieldtype": "Duration",
+   "label": "Pasting Duration 01"
+  },
+  {
+   "fieldname": "cup_foaming_duration01",
+   "fieldtype": "Duration",
+   "label": "Cup Foaming Duration 01"
+  },
+  {
+   "fieldname": "quality_check_duration01",
+   "fieldtype": "Duration",
+   "label": "Quality Check Duration 01"
+  },
+  {
+   "fieldname": "delivery_duration01",
+   "fieldtype": "Duration",
+   "label": "Delivery Duration 01"
+  },
+  {
+   "fieldname": "polar_cutting_duration02",
+   "fieldtype": "Duration",
+   "label": "Polar Cutting Duration 02"
+  },
+  {
+   "fieldname": "printing_duration02",
+   "fieldtype": "Duration",
+   "label": "Printing Duration 02"
+  },
+  {
+   "fieldname": "drying_duration02",
+   "fieldtype": "Duration",
+   "label": "Drying Duration 02"
+  },
+  {
+   "fieldname": "lamination_duration02",
+   "fieldtype": "Duration",
+   "label": "Lamination Duration 02"
+  },
+  {
+   "fieldname": "cutting_duration02",
+   "fieldtype": "Duration",
+   "label": "Cutting Duration 02"
+  },
+  {
+   "fieldname": "pasting_duration02",
+   "fieldtype": "Duration",
+   "label": "Pasting Duration 02"
+  },
+  {
+   "fieldname": "cup_foaming_duration02",
+   "fieldtype": "Duration",
+   "label": "Cup Foaming Duration 02"
+  },
+  {
+   "fieldname": "quality_check_duration02",
+   "fieldtype": "Duration",
+   "label": "Quality Check Duration 02"
+  },
+  {
+   "fieldname": "delivery_duration02",
+   "fieldtype": "Duration",
+   "label": "Delivery Duration 02"
+  },
+  {
+   "fieldname": "polar_cutting_duration03",
+   "fieldtype": "Duration",
+   "label": "Polar Cutting Duration 03"
+  },
+  {
+   "fieldname": "printing_duration03",
+   "fieldtype": "Duration",
+   "label": "Printing Duration 03"
+  },
+  {
+   "fieldname": "drying_duration03",
+   "fieldtype": "Duration",
+   "label": "Drying Duration 03"
+  },
+  {
+   "fieldname": "lamination_duration03",
+   "fieldtype": "Duration",
+   "label": "Lamination Duration 03"
+  },
+  {
+   "fieldname": "cutting_duration03",
+   "fieldtype": "Duration",
+   "label": "Cutting Duration 03"
+  },
+  {
+   "fieldname": "pasting_duration03",
+   "fieldtype": "Duration",
+   "label": "Pasting Duration 03"
+  },
+  {
+   "fieldname": "cup_foaming_duration03",
+   "fieldtype": "Duration",
+   "label": "Cup Foaming Duration 03"
+  },
+  {
+   "fieldname": "quality_check_duration03",
+   "fieldtype": "Duration",
+   "label": "Quality Check Duration 03"
+  },
+  {
+   "fieldname": "delivery_duration03",
+   "fieldtype": "Duration",
+   "label": "Delivery Duration 03"
+  },
+  {
+   "fieldname": "total_production_timeline01",
+   "fieldtype": "Data",
+   "label": "Total Production Timeline (In Days) 01"
+  },
+  {
+   "fieldname": "extra_due_time_in_days01",
+   "fieldtype": "Data",
+   "label": "Extra Due Time (In Days)"
+  },
+  {
+   "fieldname": "total_production_timeline02",
+   "fieldtype": "Data",
+   "label": "Total Production Timeline (In Days) 02"
+  },
+  {
+   "fieldname": "extra_due_time_in_days02",
+   "fieldtype": "Data",
+   "label": "Extra Due Time (In Days) 02"
+  },
+  {
+   "fieldname": "column_break_djlr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_production_timeline03",
+   "fieldtype": "Data",
+   "label": "Total Production Timeline (In Days) 03"
+  },
+  {
+   "fieldname": "extra_due_time_in_days03",
+   "fieldtype": "Data",
+   "label": "Extra Due Time (In Days) 03"
+  },
+  {
+   "fieldname": "main_product_quantity",
+   "fieldtype": "Data",
+   "label": "Main Product Quantity"
+  },
+  {
+   "fieldname": "quantity_and_margin_section",
+   "fieldtype": "Section Break",
+   "label": "Quantity And Margin"
+  },
+  {
+   "fieldname": "quantity_01__main_column",
+   "fieldtype": "Column Break",
+   "label": "Quantity 01  MAIN"
+  },
+  {
+   "fieldname": "costing_quantity_01",
+   "fieldtype": "Int",
+   "label": "Costing Quantity 01",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "margin01",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Margin 01",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantity_02_column",
+   "fieldtype": "Column Break",
+   "label": "Quantity 02"
+  },
+  {
+   "fieldname": "costing_quantity_02",
+   "fieldtype": "Int",
+   "label": "Costing Quantity 02",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "margin02",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Margin 02",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantity_03_column",
+   "fieldtype": "Column Break",
+   "label": "Quantity 03"
+  },
+  {
+   "fieldname": "costing_quantity_03",
+   "fieldtype": "Int",
+   "label": "Costing Quantity 03",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "margin03",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Margin 03",
+   "reqd": 1
+  },
+  {
+   "fieldname": "product_count_01",
+   "fieldtype": "Data",
+   "label": "Product Quantity 01"
+  },
+  {
+   "fieldname": "total_amount01",
+   "fieldtype": "Currency",
+   "label": "Total Amount 01",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount02",
+   "fieldtype": "Currency",
+   "label": "Total Amount 02",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount03",
+   "fieldtype": "Currency",
+   "label": "Total Amount 03",
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-08-31 14:40:48.100471",
- "modified_by": "sayedtkg@gmail.com",
+ "modified": "2025-10-01 18:00:13.910621",
+ "modified_by": "aquib.pwf@gmail.com",
  "module": "Cost Calculation",
  "name": "Cost Calculation",
  "naming_rule": "By \"Naming Series\" field",
