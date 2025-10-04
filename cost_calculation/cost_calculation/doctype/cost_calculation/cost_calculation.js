@@ -182,6 +182,21 @@ frappe.ui.form.on('Cost Calculation', {
     margin03: function(frm) { calculate_totals_for_quantity(frm, '03'); },
     vatait: function(frm) { calculate_all_quantities(frm); },
     
+    // Customer address auto-fetch
+    customer_name: function(frm) {
+        if (frm.doc.customer_name) {
+            frm.call('fetch_customer_details').then(r => {
+                if (r.message) {
+                    frm.set_value('c_address', r.message.c_address);
+                    frm.set_value('c_district', r.message.c_district);
+                    frm.set_value('c_thana', r.message.c_thana);
+                    frm.set_value('c_postcode', r.message.c_postcode);
+                    frm.set_value('customer_delivery_location', r.message.customer_delivery_location);
+                }
+            });
+        }
+    },
+    
     // Delivery automation
     customer_delivery_location: function(frm) {
         if (frm.doc.customer_delivery_location) {

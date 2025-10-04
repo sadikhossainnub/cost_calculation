@@ -114,11 +114,33 @@ class CostCalculation(Document):
 
     def auto_set_delivery_details(self):
         """Auto set delivery zone and distance based on customer location"""
+        if self.customer_name:
+            self.fetch_customer_address()
+        
         if self.customer_delivery_location and not self.delivery_zone:
             from cost_calculation.cost_calculation.api import get_zone_distance
             zone_data = get_zone_distance(self.customer_delivery_location)
             self.delivery_zone = zone_data.get("zone")
             self.distance_km = zone_data.get("distance")
+    
+    def fetch_customer_address(self):
+        """Fetch customer address details and set delivery location"""
+        if not self.customer_name:
+            return
+        
+        customer = frappe.get_doc("Customer", self.customer_name)
+        
+        # Get primary address
+        if customer.customer_primary_address:
+            address = frappe.get_doc("Address", customer.customer_primary_address)
+            self.c_address = address.address_line1 or ""
+            self.c_district = address.city or ""
+            self.c_thana = address.county or ""
+            self.c_postcode = address.pincode or ""
+            
+            # Combine address for delivery location
+            address_parts = [self.c_address, self.c_thana, self.c_district]
+            self.customer_delivery_location = ", ".join([part for part in address_parts if part])
 
     def calculate_delivery_charges(self):
         """Auto calculate delivery charges if enabled"""
@@ -187,3 +209,15 @@ class CostCalculation(Document):
             delivery_item.quantity = 1
             delivery_item.rate = delivery_charge
             delivery_item.amount = delivery_charge
+    
+    @frappe.whitelist()
+    def fetch_customer_details(self):
+        """Fetch customer address details"""
+        self.fetch_customer_address()
+        return {
+            "c_address": self.c_address,
+            "c_district": self.c_district,
+            "c_thana": self.c_thana,
+            "c_postcode": self.c_postcode,
+            "customer_delivery_location": self.customer_delivery_location
+        }

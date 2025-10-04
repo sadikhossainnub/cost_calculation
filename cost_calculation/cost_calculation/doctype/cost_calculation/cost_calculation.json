@@ -13,6 +13,10 @@
   "costing_required_by",
   "tentative_delivery_date_by_client",
   "customer_delivery_location",
+  "c_address",
+  "c_district",
+  "c_thana",
+  "c_postcode",
   "column_break_gsoq",
   "transaction_date",
   "costing_time",
@@ -341,7 +345,38 @@
   {
    "fieldname": "customer_delivery_location",
    "fieldtype": "Data",
-   "label": "Customer Delivery Location"
+   "label": "Customer Delivery Location",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_name.customer_primary_address",
+   "fieldname": "c_address",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_name.territory",
+   "fieldname": "c_district",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "District",
+   "read_only": 1
+  },
+  {
+   "fieldname": "c_thana",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Thana",
+   "read_only": 1
+  },
+  {
+   "fieldname": "c_postcode",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Post Code",
+   "read_only": 1
   },
   {
    "fieldname": "any_instruction",
@@ -444,16 +479,16 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "15",
    "fieldname": "delivery_rate_per_km",
    "fieldtype": "Currency",
-   "label": "Rate Per KM",
-   "default": "15"
+   "label": "Rate Per KM"
   },
   {
+   "default": "1",
    "fieldname": "auto_calculate_delivery",
    "fieldtype": "Check",
-   "label": "Auto Calculate Delivery Charge",
-   "default": "1"
+   "label": "Auto Calculate Delivery Charge"
   },
   {
    "fieldname": "section_break_delivery_items",
@@ -952,8 +987,8 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-10-01 18:00:13.910621",
- "modified_by": "aquib.pwf@gmail.com",
+ "modified": "2025-10-04 18:23:51.084414",
+ "modified_by": "Administrator",
  "module": "Cost Calculation",
  "name": "Cost Calculation",
  "naming_rule": "By \"Naming Series\" field",
