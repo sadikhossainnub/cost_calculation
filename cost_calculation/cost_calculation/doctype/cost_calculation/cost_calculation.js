@@ -217,6 +217,13 @@ frappe.ui.form.on('Cost Calculation', {
     distance_km: function(frm) { calculate_delivery_charges(frm); },
     delivery_rate_per_km: function(frm) { calculate_delivery_charges(frm); },
     auto_calculate_delivery: function(frm) { calculate_delivery_charges(frm); },
+    
+    // Auto-fetch main product quantity to costing quantity 01
+    main_product_quantity: function(frm) {
+        if (frm.doc.main_product_quantity && !frm.doc.costing_quantity_01) {
+            frm.set_value('costing_quantity_01', parseInt(frm.doc.main_product_quantity));
+        }
+    },
 
     // Production timeline fields
     polar_cutting_duration01: function(frm) { calculate_production_timeline_for_quantity(frm, '01'); },

@@ -4,6 +4,7 @@ from frappe.model.document import Document
 class CostCalculation(Document):
     def validate(self):
         self.set_account_manager()
+        self.set_costing_quantity()
         self.auto_set_delivery_details()
         self.calculate_child_table_amounts()
         self.calculate_delivery_charges()
@@ -229,3 +230,8 @@ class CostCalculation(Document):
             employee = frappe.db.get_value("Employee", {"user_id": frappe.session.user}, "name")
             if employee:
                 self.account_manager = employee
+    
+    def set_costing_quantity(self):
+        """Auto set costing quantity 01 from main product quantity"""
+        if self.main_product_quantity and not self.costing_quantity_01:
+            self.costing_quantity_01 = int(self.main_product_quantity)
