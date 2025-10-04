@@ -48,6 +48,12 @@
   "packaging_items_section",
   "items_copy",
   "section_break_hjkc",
+  "delivery_zone",
+  "distance_km",
+  "column_break_delivery",
+  "delivery_rate_per_km",
+  "auto_calculate_delivery",
+  "section_break_delivery_items",
   "items_copy_copy",
   "chaat_size_rate",
   "chaat_details",
@@ -253,7 +259,7 @@
    "fieldname": "chaat_details",
    "fieldtype": "Table",
    "label": "Chaat Details",
-   "options": "Cost Calculation Item"
+   "options": "Chaat Size Rate"
   },
   {
    "fieldname": "delivery_timeline_section",
@@ -306,7 +312,7 @@
    "fieldname": "wastage_details_copy",
    "fieldtype": "Table",
    "label": "Wastage Details",
-   "options": "Cost Calculation Item"
+   "options": "Wastage"
   },
   {
    "fieldname": "column_break_kejt",
@@ -421,6 +427,38 @@
    "fieldname": "section_break_hjkc",
    "fieldtype": "Section Break",
    "label": "Delivery Charge"
+  },
+  {
+   "fieldname": "delivery_zone",
+   "fieldtype": "Select",
+   "label": "Delivery Zone",
+   "options": "Dhaka City\nDhaka Metro\nChittagong\nSylhet\nRajshahi\nKhulna\nBarisal\nRangpur\nMymensingh\nOther"
+  },
+  {
+   "fieldname": "distance_km",
+   "fieldtype": "Float",
+   "label": "Distance (KM)"
+  },
+  {
+   "fieldname": "column_break_delivery",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_rate_per_km",
+   "fieldtype": "Currency",
+   "label": "Rate Per KM",
+   "default": "15"
+  },
+  {
+   "fieldname": "auto_calculate_delivery",
+   "fieldtype": "Check",
+   "label": "Auto Calculate Delivery Charge",
+   "default": "1"
+  },
+  {
+   "fieldname": "section_break_delivery_items",
+   "fieldtype": "Section Break",
+   "label": "Delivery Items"
   },
   {
    "fieldname": "items_copy_copy",

@@ -46,6 +46,16 @@ app_license = "mit"
 doctype_js = {
     "Item": "public/js/item_button.js"
 }
+
+# API endpoints
+api_endpoints = [
+    "cost_calculation.cost_calculation.api.get_item_details",
+    "cost_calculation.cost_calculation.api.calculate_wastage_percentage",
+    "cost_calculation.cost_calculation.api.get_production_capacity",
+    "cost_calculation.cost_calculation.api.auto_calculate_timeline",
+    "cost_calculation.cost_calculation.api.duplicate_cost_calculation",
+    "cost_calculation.cost_calculation.api.export_cost_calculation"
+]
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
