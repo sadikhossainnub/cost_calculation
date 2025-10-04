@@ -3,6 +3,7 @@ from frappe.model.document import Document
 
 class CostCalculation(Document):
     def validate(self):
+        self.set_account_manager()
         self.auto_set_delivery_details()
         self.calculate_child_table_amounts()
         self.calculate_delivery_charges()
@@ -221,3 +222,10 @@ class CostCalculation(Document):
             "c_postcode": self.c_postcode,
             "customer_delivery_location": self.customer_delivery_location
         }
+    
+    def set_account_manager(self):
+        """Auto set account manager to current user's employee record"""
+        if not self.account_manager:
+            employee = frappe.db.get_value("Employee", {"user_id": frappe.session.user}, "name")
+            if employee:
+                self.account_manager = employee

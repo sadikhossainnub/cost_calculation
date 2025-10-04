@@ -451,7 +451,8 @@
    "fieldname": "account_manager",
    "fieldtype": "Link",
    "label": "Account Manager",
-   "options": "Employee"
+   "options": "Employee",
+   "default": "__user"
   },
   {
    "fieldname": "previous_order_sale_rate",
